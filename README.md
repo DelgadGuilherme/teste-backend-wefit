@@ -32,6 +32,35 @@ Quanto à decisão de não criar uma tabela separada para bairros, isso pode ser
 
 ### Rotas da API e Funcionalidades.
 
+Todas as rotas possuem autentiação, para fazer seu login use a seguinte rota e dados:
+
+#### Autenticação de Usuário
+Todas as rotas da API requerem autenticação. Para realizar o login e acessar as rotas protegidas, utilize a seguinte rota e os dados de exemplo abaixo.
+
+- POST `localhost:4568/auth/login`
+  Esta rota permite que o usuário realize o login em sua conta. Ao fazer isso, um token de autenticação será retornado, que deve ser utilizado para acessar as rotas protegidas da API.
+    ```
+    body: {
+      "email": "testeWefit@gmail.com",
+      "password": "senhaDeTeste123"
+    }
+  ```
+  Exemplo de autenticação:
+  ```
+  curl -X POST "localhost:4568/auth/login" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "email": "testeWefit@gmail.com",
+           "password": "senhaDeTeste123"
+         }'
+  ```
+
+  Exemplo para consumir as rotas da API:
+  ```
+  curl -X GET -H "Authorization: Bearer {token da requisicao anterior}" "localhost:4568/profile"
+  ```
+
+  
 #### 1. Criação de Perfil de Usuário
 - POST `localhost:4568/profile`
   Cria o perfil de um usuário.

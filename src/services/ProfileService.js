@@ -1,10 +1,8 @@
 const Services = require("./Services");
 const StateService = require("./StateService");
 const dataSource = require("../models");
-const Street = require("../models");
 const CityService = require("./CityService");
 const StreetService = require("./StreetService");
-const uuid = require('uuid')
 
 const stateService = new StateService();
 const cityService = new CityService();
