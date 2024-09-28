@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "f2287898-8a31-4ece-94e4-f9ed0fc5e3a9",
+		"name": "WeFit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12198076"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "/profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"João Atualizado refacr\",\r\n    \"cnpj\": \"209238493894\",\r\n    \"cpf\": \"470.278.570-22\",\r\n    \"cell_phone\":  \"(55) 12 998767-0954\",\r\n    \"email\": \"joao@gmail.com\",\r\n    \"confirm_email\": \"joao@gmail.com\",\r\n    \"state_name\": \"Rio de Janeiro\",\r\n    \"postal_code\": \"12246021\",\r\n    \"street_name\": \"Rua 1\",\r\n    \"number\": 1,\r\n    \"city_name\": \"São Jose dos Campos\",\r\n    \"neighborhood\": \"Bairro 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4568/profile/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"profile",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/:id/profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/profile/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"profile",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNDYwNDVkLTJjOGYtNGMyMi1iMmZkLWI0NjgyMGI3MmJmYiIsImVtYWlsIjoiam9hb0BnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDA4OTYsImV4cCI6MTcyNzk3Mjg5Nn0.2tPstGNDJHUpIgPpStL91w_erETvKredQD4KGO4a31A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"João teste refact\",\r\n    \"cnpj\": \"209238493894\",\r\n    \"cpf\": \"470.278.570-22\",\r\n    \"cell_phone\":  \"(55) 12 998767-0954\",\r\n    \"email\": \"joao@gmail.com\",\r\n    \"confirm_email\": \"joao@gmail.com\",\r\n    \"state_name\": \"São aaaa\",\r\n    \"postal_code\": \"12246021\",\r\n    \"street_name\": \"Rua 1\",\r\n    \"number\": 1,\r\n    \"city_name\": \"São Jose dos Campos\",\r\n    \"neighborhood\": \"Bairro 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4568/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/profile:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/profile/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"profile",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNDYwNDVkLTJjOGYtNGMyMi1iMmZkLWI0NjgyMGI3MmJmYiIsImVtYWlsIjoiam9hb0BnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDA4OTYsImV4cCI6MTcyNzk3Mjg5Nn0.2tPstGNDJHUpIgPpStL91w_erETvKredQD4KGO4a31A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste wefit\",\r\n    \"email\": \"testeWefit@gmail.com\",\r\n    \"password\": \"senhaDeTeste123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4568/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testeWefit@gmail.com\",\r\n    \"password\": \"senhaDeTeste123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4568/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
