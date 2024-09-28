@@ -37,6 +37,8 @@ Todas as rotas possuem autentiação, para fazer seu login use a seguinte rota e
 #### Autenticação de Usuário
 Todas as rotas da API requerem autenticação. Para realizar o login e acessar as rotas protegidas, utilize a seguinte rota e os dados de exemplo abaixo.
 
+### A pasta postman_collection possui todas as rotas com os exemplos.
+
 - POST `localhost:4568/auth/login`
   Esta rota permite que o usuário realize o login em sua conta. Ao fazer isso, um token de autenticação será retornado, que deve ser utilizado para acessar as rotas protegidas da API.
     ```
