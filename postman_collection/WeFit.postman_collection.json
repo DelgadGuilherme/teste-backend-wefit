@@ -239,6 +239,210 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "state",
+			"item": [
+				{
+					"name": "/state",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/state",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/state",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/state/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"state",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "city",
+			"item": [
+				{
+					"name": "/city",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/city",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/state",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/city/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"city",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "street",
+			"item": [
+				{
+					"name": "/street",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/street",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"street"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/street",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NDhlMjNkLWY4ZGQtNDdkNy1iNTgzLTE4YWNlMjE2N2Q0MiIsImVtYWlsIjoidGVzdGVXZWZpdEBnbWFpbC5jb20iLCJpYXQiOjE3Mjc1NDQwODMsImV4cCI6MTcyNzk3NjA4M30.uKcE7WaJKFhMZDNnnlRWedzvIe5nVb7Eb5df7yGFUgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4568/street/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4568",
+							"path": [
+								"street",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
