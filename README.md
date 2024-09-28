@@ -6,7 +6,16 @@ Seja bem vindo ao teste de backend da Wefit.
 
     docker-compose up -D
 
-o docker-compose vai criar um container de um MySQL e você poderá acessar via localhost:3306 e a senha do usuário **root** é **senha_root_123**
+o docker-compose vai criar um container de um MySQL e a estrutura de tabelas necessarias, você poderá acessar via localhost:3306 e a senha do usuário **root** é **senha_root_123**
+
+### Rode o seguinte comando para baixar as dependencias:
+    
+    npm i
+
+### Para Rodas as migrations e as seeds para preencher o banco com dados inicias, é necessario rodar o seguinte comando:
+
+    npx sequelize-cli db:migrate
+    npx sequelize-cli db:seed:all
 
 ### Para iniciar o servidor express basta executar o seguinte comando:
 
@@ -14,6 +23,46 @@ o docker-compose vai criar um container de um MySQL e você poderá acessar via 
     ou
     yarn start
 
-Depois que concluir seu teste não de enviar o seu código junto a pasta data, nela está salvo o volume do MySQL criado pelo docker.
+### Modelagem do banco de dados.
 
-Boa sorte =)
+Ao criar três tabelas separadas para armazenar informações de endereço do usuário - "street" (logradouro), "city" (cidade) e "state" (estado) - optei por adotar uma abordagem de normalização de banco de dados. Esta abordagem foi escolhida para evitar redundâncias nos dados e garantir uma estrutura de banco de dados mais eficiente e organizada.
+
+Quanto à decisão de não criar uma tabela separada para bairros, isso pode ser justificado pelo fato de que os nomes de bairros podem variar bastante e não possuem uma padronização amplamente aceita. Ao invés disso, é comum incluir o nome do bairro como parte do endereço da rua na tabela "street", o que pode ser mais prático e flexível para lidar com essas variações.
+
+
+### Rotas da API e Funcionalidades.
+
+#### 1. Criação de Perfil de Usuário
+- POST `localhost:4568/profile`
+  Cria o perfil de um usuário.
+    ```
+        body: {
+            "name": "João teste refact",
+            "cnpj": "209238493894",
+            "cpf": "470.278.570-22",
+            "cell_phone":  "(55) 12 998767-0954",
+            "email": "joao@gmail.com",
+            "confirm_email": "joao@gmail.com",
+            "state_name": "São aaaa",
+            "postal_code": "12246021",
+            "street_name": "Rua 1",
+            "number": 1,
+            "city_name": "São Jose dos Campos",
+            "neighborhood": "Bairro 2"
+        }
+  ```
+#### 2. Listagem de Perfis de Usuários
+- GET `localhost:4568/profile`
+  Retorna todos os perfis de usuários cadastrados.
+
+#### 3. Obter Perfil de Usuário por ID
+- GET `localhost:4568/profile/:id`
+  Retorna o perfil de um usuário específico, identificado pelo parâmetro :id.
+
+#### 4. Atualização do perfil de um usuário pelo seu ID
+- PUT `localhost:4568/profile/:id`
+  Atualiza o perfil de um usuário específico, identificado pelo parâmetro :id.
+
+#### 5. Excluir o perfil de um usuário pelo seu ID
+- DELETE `localhost:4568/profile/:id`
+  Exclui o perfil de um usuário específico, identificado pelo parâmetro :id.
