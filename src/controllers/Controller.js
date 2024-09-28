@@ -25,7 +25,7 @@ class Controller {
      async create(req, res) {
        try {
          const result = await this.serviceEntity.create(req.body);
-         return res.status(200).json(result);
+         return res.status(201).json(result);
        } catch (error) {
            return res.status(500).json(error.message);
        }
@@ -38,7 +38,7 @@ class Controller {
             if (!result) {
                 return res.status(400).json({ mensagem: `O Registro de id ${id} não foi atualizado` });
             }
-            return res.status(200).json({ mensagem: `O Registro de id ${id} atualizado com sucesso` });
+            return res.status(201).json({ mensagem: `O Registro de id ${id} atualizado com sucesso` });
         } catch (error) {
             return res.status(500).json(error.message);
         }
