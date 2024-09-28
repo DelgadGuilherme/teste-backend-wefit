@@ -7,11 +7,13 @@
     "start": "ts-node-dev --files -r tsconfig-paths/register --inspect --ignore-watch node_modules app.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.17.3",
     "mysql2": "^3.11.3",
     "sequelize": "^6.37.3",
-    "sequelize-cli": "^6.6.2"
+    "sequelize-cli": "^6.6.2",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

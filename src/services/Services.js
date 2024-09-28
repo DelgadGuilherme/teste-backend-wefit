@@ -35,10 +35,6 @@ class Services {
         return true;
     }
 
-    async upsert(data) {
-        return dataSource[this.model].upsert(data, { returning: ['id'] });
-    }
-
     async delete(id) {
         return dataSource[this.model].destroy({ where: { id: id } });
     }
