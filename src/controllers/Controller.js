@@ -44,6 +44,18 @@ class Controller {
         }
     }
 
+    async upsert(req, res) {
+        try {
+            const result = await this.serviceEntity.upsert(req.body);
+            if (!result) {
+                return res.status(400).json({ mensagem: `O Registro não foi inserido/atualizado` });
+            }
+            return res.status(200).json({ mensagem: `O Registro foi inserido/atualizado com sucesso` });
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
     async delete(req, res) {
         const { id } = req.params;
         try {

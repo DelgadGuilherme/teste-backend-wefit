@@ -13,8 +13,16 @@ class Services {
         return dataSource[this.model].findByPk(id);
     }
 
+    async getByName(name) {
+        return dataSource[this.model].findOne({
+            where: {
+                name: name
+            }
+        });
+    }
+
     async create(data) {
-        return dataSource[this.model].create(data);
+        return dataSource[this.model].create(data, { returning: ['id'] });
     }
 
     async update(data, id) {
@@ -25,6 +33,10 @@ class Services {
             return false;
         }
         return true;
+    }
+
+    async upsert(data) {
+        return dataSource[this.model].upsert(data, { returning: ['id'] });
     }
 
     async delete(id) {

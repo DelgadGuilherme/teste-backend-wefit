@@ -4,13 +4,10 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Profile extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
+      Profile.belongsTo(models.Street, {
+        foreignKey: 'street_id',
+      });
     }
   }
   Profile.init({
@@ -41,11 +38,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     created_at: {
       type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW
     },
     updated_at: {
       type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW
     },
     deleted_at: {
       type: DataTypes.DATE
@@ -54,7 +49,11 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Profile',
     tableName: 'profile',
-    timestamps: false,
+    timestamps: true,
+    paranoid: true,
+    deletedAt: 'deleted_at',
+    createdAt: 'created_at',
+    updatedAt: false,
   });
   return Profile;
 };
